@@ -28,7 +28,7 @@ const projectsList = [
     code: 'https://github.com/CA-G12/E-Commerce-Team3',
   },
   {
-    name: 'Reddit',
+    name: 'Reddit Clone',
     image: reddit,
     description: 'is a network of communities where people can dive into their interests, hobbies and passions. ',
     demo: 'https://github.com/CA-G12/Shatha-Reddit',
@@ -37,7 +37,7 @@ const projectsList = [
   {
     name: 'Watchflix',
     image: watchFlix,
-    description: 'is an application specially built for the user to find their favourite movies and music. This application will be like a movie keeper where the user is able to find and download the movies that they like and also listen to their favorite music.',
+    description: 'is an application specially built for the user to find their favourite movies and music. This application will be like a movie keeper where the user is able to find and download the movies.',
     demo: 'https://github.com/CA-G12/Watchflix',
     code: 'https://github.com/CA-G12/Watchflix',
   },

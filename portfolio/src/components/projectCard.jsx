@@ -12,8 +12,8 @@ function Project({
         {description}
       </p>
       <div className="card-links">
-        <a href={code}>Code</a>
-        <a href={demo}>Demo</a>
+        <div><a href={code} target="_blank" rel="noreferrer">Code</a></div>
+        <div><a href={demo} target="_blank" rel="noreferrer">Demo</a></div>
       </div>
     </div>
   );
