@@ -637,6 +637,9 @@ background-color: #f96196;
 .brief .role {
   padding: 0px 3rem;
 }
+.card-links {
+  padding-top: 20px;
+}
 } 
 
 
