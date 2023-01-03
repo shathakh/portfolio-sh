@@ -16,10 +16,12 @@ function About() {
     <div className="about" id="about">
       <h2 className="title">About Me</h2>
       <p className="description">
-        I am a highly-motivated and talented full-stack web developer skilled in
+        I am a highly-motivated and talented full-stack web developer (PERN stack) skilled in
         Nodejs, Express, Reactjs, Sequelize, Postgres SQL, and TypeScript.
         I am experienced with all of the technology involved with building
-        and launching web applications.
+        and launching web applications. I have Ability to solve complex problems
+        successfully with minimal guidance or help using a logical reasoning
+        technique and a strong attention to detail.
       </p>
       <div className="skills">
         <h2>

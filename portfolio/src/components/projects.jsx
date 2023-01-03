@@ -9,6 +9,7 @@ function Projects() {
       <div className="cards-section">
         {projectsList.map((ele) => (
           <Project
+            key={ele.name}
             name={ele.name}
             image={ele.image}
             description={ele.description}

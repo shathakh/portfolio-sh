@@ -11,51 +11,63 @@
   justify-content: space-between;
   padding: 2rem 4rem;
   position: fixed !important;
-  transition: all 0.3s ease-out 0s !important;
+  transition: all 0.3s ease-in-out 0s;
   width: 100%;
 }
  .logo{
   font-size: 20px;
-  color: #2c444e;
+  color: #263238;
 }
-.content-list ul {
+.navbar {
   display: flex;
-  list-style: none;
   gap: 6rem;
 }
+.navbar li {
+  list-style: none;
+  position: relative;
+} 
 .scrolling{
   display: flex;
   justify-content: space-between;
   padding: 1rem 4rem;
   position: fixed !important;
-  transition: all 0.3s ease-out 0s !important;
+  transition: all 0.3s ease-out 0s;
   width: 100%;
   background-color: white;
   z-index: 1;
 }
-.content-list ul li a{
+.navbar li a{
   text-decoration: none;
-  color: #2c444e;
+  color: #263238;
+  transition: .3s ease-in-out;
 }
- .content-list ul li :hover{
+.navbar li a:hover{
   color: #ff81ae;
-  transition: .4s;
+ }
+
+.navbar li a:hover::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #ff81ae;
+  position: absolute;
+  bottom: -4px;
+  left: 1px;
  }
 
 .home{
-  /* position: relative; */
-  /* background-position: top center; */
   background-color: whitesmoke;
-  /* background-image: url(../src/assets/23.jpg); */
-  /* z-index: -1; */
   width: 100%;
-  height: 48rem;
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
+  /* height: 48rem; */
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
 }
 
+.programmer-photo{
+  width: 45%;
+}
 .brief{
   padding-top: 16rem;
     padding-left: 6rem;
@@ -63,14 +75,14 @@
 
 .brief .hi{
   font-size: 45px;
-  color: #1b2e35;
+  color: #263238;
   font-weight: bold;
 }
 
 .brief .name{
   font-size: 40px;
     font-weight: bold;
-    color: #1b2e35;
+    color: #263238;
 }
 .brief .name span{
   color: #ff81ae;
@@ -78,7 +90,7 @@
 .brief .role{
   font-size: 30px;
   margin-top: 30px;
-  color: #2c444e;
+  color: #263238;
 }
 
 .brief .view-cv {
@@ -95,7 +107,7 @@
 
 .brief .view-cv a{
   text-decoration: none;
-  color: #1b2e35;
+  color: #263238;
   padding: 10px;
   border-radius: 20px;
   width: 100%;
@@ -118,7 +130,7 @@ transition: 1s;
 
 .brief .icons a{
   font-size: 25px;
-  color: #1b2e35;
+  color: #263238;
   transition: .7s;
 }
 
@@ -207,12 +219,13 @@ transition: 1s;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #ffd9e7;
+  /* background-color: #ffd9e7; */
+  background-color: #ffd9e7c9;
   border-radius: 10px;
 }
 
 .text {
-  color: #1b2e35;
+  color: #263238;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -301,7 +314,7 @@ color: white;
 
 .card-links a{
   text-decoration: none;
-  color: #111314;
+  color: #263238;
 }
 
 
@@ -409,10 +422,7 @@ color: white;
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
-}
-
-.submit-btn :hover{
-  background-color: #FFC0CB;
+  color: #263238;
 }
 
 .contact-content p {
@@ -440,8 +450,104 @@ color: white;
   font-size: 30px;
   transition: .4s;
 }
-.footer{
-  background-color: #efefef;
-  text-align: center;
-  padding: 1.5rem;
+
+@media (max-width: 1290px){
+  .brief {
+    padding-top: 12rem;
+    padding-left: 1rem;
 }
+
+.about .description {
+  margin: 0px 8rem;
+}
+.cards-section {
+  margin-left: 8.5rem;
+}
+.contact-content {
+      width: 100%;
+}
+.social-icons {
+  margin-bottom: 3rem;
+}
+.container {
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+}
+
+@media (max-width: 768px) {
+.brief {
+    padding-top: 12rem;
+    padding-left: 0rem;
+    text-align: center;
+}
+.programmer-photo {
+    width: 80%;
+}
+.brief .icons {
+  margin: 0 auto;
+}
+.brief .view-cv {
+  margin: 0 auto;
+    margin-top: 25px;
+}
+.about .description {
+    margin: 0px 2rem;
+    font-size: 18px;
+}
+.container {
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+.skills .icons .languages, .tools {
+      margin: 2.5rem 4rem;
+}
+.cards-section {
+  margin-left: 9rem;
+}
+.social-icons {
+  margin-bottom: 3rem;
+}
+.contact-form form .submit-btn {
+  margin-left: 10rem;
+}
+}
+
+@media (max-width: 600px) {
+.brief {
+    padding-top: 12rem;
+    padding-left: 0rem;
+    text-align: center;
+}
+.programmer-photo {
+    width: 80%;
+}
+.brief .icons {
+  margin: 0 auto;
+}
+.brief .view-cv {
+  margin: 0 auto;
+    margin-top: 25px;
+}
+.about .description {
+    margin: 0px 2rem;
+    font-size: 18px;
+}
+.container {
+    margin-bottom: 2rem;
+}
+.skills .icons .languages, .tools {
+      margin: 2.5rem 4rem;
+}
+.cards-section {
+  margin-left: 4rem;
+}
+.social-icons {
+  margin-bottom: 3rem;
+}
+.contact-form form .submit-btn {
+  margin-left: 10rem;
+}
+} 
+
+
