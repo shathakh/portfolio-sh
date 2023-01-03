@@ -11,7 +11,7 @@
   justify-content: space-between;
   padding: 2rem 4rem;
   position: fixed !important;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
   width: 100%;
 }
  .logo{
@@ -31,7 +31,7 @@
   justify-content: space-between;
   padding: 1rem 4rem;
   position: fixed !important;
-  transition: all 0.3s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
   width: 100%;
   background-color: white;
   z-index: 1;
@@ -58,7 +58,6 @@
 .home{
   background-color: whitesmoke;
   width: 100%;
-  /* height: 48rem; */
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -102,7 +101,7 @@
   text-align: center;
   font-size: 17px;
   font-weight: 600;
-  /* box-shadow: 0px 0px 10px 0px #474747; */
+  transition: .7s ease-in;
 }
 
 .brief .view-cv a{
@@ -113,12 +112,14 @@
   width: 100%;
 }
 
-.brief .view-cv :hover{
+.brief .view-cv a:hover{
 color: white;
 transition: 1s;
 }
 
-
+.brief .view-cv:hover{
+background-color: #263238;
+}
 
 .brief .icons {
   display: flex;
@@ -137,7 +138,6 @@ transition: 1s;
 .brief .icons a .svg-inline--fa{
   padding: 7px ;
   border-radius: 20px;
-
 }
 
 .brief .icons a :hover{
@@ -156,12 +156,11 @@ transition: 1s;
   background-image: url(../src/assets/6560073.jpg);
   z-index: -1;
   width: 100%;
-  /* height: 55rem; */
-  /* background-repeat: no-repeat; */
   background-size: cover;
   color: white;
   padding-bottom: 4rem;
 }
+
 .about .title{
   text-align: center;
   color: #ff81ae;
@@ -194,7 +193,7 @@ transition: 1s;
   flex-wrap: wrap;
 }
 
- .container {
+.container {
   position: relative;
 }
 
@@ -278,6 +277,7 @@ transition: 1s;
   transform: translate3D(0, -9px, 0);
   background-color: white;
 }
+
 .card h3{
   color: #ff81ae;
   padding: 10px;
@@ -294,6 +294,7 @@ transition: 1s;
   height: 230px;
   border-radius: 10px;
 }
+
 .card-links{
   padding-top: 15px;
   display: flex;
@@ -306,40 +307,47 @@ transition: 1s;
   border-radius: 10px;
   width: 80px;
   font-weight: bold;
+  transition: .5s ease-in;
 }
 
-.card-links div :hover{
+.card-links div a:hover{
 color: white;
+}
+
+.card-links div:hover{
+background-color: #f96196;
 }
 
 .card-links a{
   text-decoration: none;
   color: #263238;
+  transition: .5s ease-in;
 }
-
 
 .cards-section{
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
-  margin-left: 5.5rem;
+  /* margin-left: 5.5rem; */
+  justify-content: center;
 }
 
 .card :hover{
   /* box-shadow: #ff81ae 0px 0px 15px; */
   transition: all 0.3s linear;
 }
+
 #contacts{
   padding-top: 2rem;
   background-image: url(../src/assets/6560073.jpg);
   z-index: -1;
   width: 100%;
-  /* height: 50rem; */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   padding-bottom: 3rem;
 }
+
 #contacts h2{
   text-align: center;
   color: #ff81ae;
@@ -353,7 +361,6 @@ color: white;
 }
 
 .email-icon , .address-icon , .phone-icon {
-  /* width: 60px; */
   background-color: #ff81ae;
   border-radius: 30px;
   margin: 1rem;
@@ -381,6 +388,7 @@ color: white;
 .social {
   margin-left: 6rem;
 }
+
 .contact-form form{
   display: flex;
   flex-direction: column;
@@ -423,6 +431,12 @@ color: white;
   font-size: 18px;
   font-weight: 600;
   color: #263238;
+  transition: .5s ease-in;
+}
+
+.contact-form form .submit-btn:hover{
+  background-color: #f96196;
+  color: white;
 }
 
 .contact-content p {
@@ -451,6 +465,10 @@ color: white;
   transition: .4s;
 }
 
+#mobile{
+  display: none;
+}
+
 @media (max-width: 1290px){
   .brief {
     padding-top: 12rem;
@@ -459,9 +477,6 @@ color: white;
 
 .about .description {
   margin: 0px 8rem;
-}
-.cards-section {
-  margin-left: 8.5rem;
 }
 .contact-content {
       width: 100%;
@@ -502,14 +517,60 @@ color: white;
 .skills .icons .languages, .tools {
       margin: 2.5rem 4rem;
 }
-.cards-section {
-  margin-left: 9rem;
-}
 .social-icons {
   margin-bottom: 3rem;
 }
 .contact-form form .submit-btn {
   margin-left: 10rem;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5rem;
+  position: fixed;
+  top: 59px;
+  right: -350px;
+  width: 328px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0px 40px 60px rgb(0 0 0 / 10%);
+  padding: 30px 0px 0px 29px;
+  transition: .3s ease-in-out;
+}
+
+.navbar.active{
+  right: 0px;
+}
+
+#mobile{
+  display: block;
+  display: block;
+  font-size: 24px;
+  margin-right: -20px;
+  color: #263238;
+  cursor: pointer;
+}
+.header {
+  padding: 1rem 4rem;
+  background-color: white;
+}
+.card{
+  width: 440px;
+  height: 500px;
+}
+.image-card {
+  width: 405px;
+  height: 240px;
+}
+.card p {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.card-links {
+  padding-top: 30px;
 }
 }
 
@@ -539,14 +600,35 @@ color: white;
 .skills .icons .languages, .tools {
       margin: 2.5rem 4rem;
 }
-.cards-section {
-  margin-left: 4rem;
-}
 .social-icons {
   margin-bottom: 3rem;
 }
 .contact-form form .submit-btn {
   margin-left: 10rem;
+}
+.contact-form form input {
+  width: 21rem;
+}
+.contact-form form textarea {
+  width: 21rem;
+}
+.contact-form form .submit-btn {
+  margin-left: 6rem;
+}
+#contacts .statement {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.card{
+  width: 360px;
+  height: 480px;
+}
+.image-card{
+  width: 338px;
+  height: 230px;
+}
+.social {
+  margin-left: 2rem;
 }
 } 
 
