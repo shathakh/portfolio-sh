@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import reactIcon from '../assets/react-white.png';
 import jsIcon from '../assets/js-white.png';
 import expressIcon from '../assets/express-white.png';
@@ -12,6 +14,28 @@ import netlifyIcon from '../assets/netlify-white.png';
 import figmaIcon from '../assets/white-figma.png';
 
 function About() {
+  gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.container', {
+        duration: 2,
+        scale: 0.5,
+        opacity: 0,
+        delay: 0.5,
+        stagger: 0.2,
+        ease: 'elastic',
+        force3D: true,
+        scrollTrigger: {
+          trigger: ref.current,
+          start: 'top center',
+          end: 'bottom center',
+        },
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   return (
     <div className="about" id="about">
       <h2 className="title">About Me</h2>
@@ -31,7 +55,7 @@ function About() {
           {' '}
           Tools
         </h2>
-        <div className="icons">
+        <div className="icons" ref={ref}>
           <div className="languages">
             <div className="container">
               <img src={jsIcon} alt="jsIcon" />
