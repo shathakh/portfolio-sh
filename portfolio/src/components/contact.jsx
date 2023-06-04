@@ -39,7 +39,7 @@ function Contact() {
             <FontAwesomeIcon className="phone-icon" icon={faPhone} />
             <div className="info">
               <h3>Phone</h3>
-              <p><a href="https://api.whatsapp.com/send?phone=970595832625" target="_blank" rel="noreferrer">+970 595 832 625</a></p>
+              <p><a href="https://api.whatsapp.com/send?phone=970595832625" target="_blank" rel="noreferrer">+970</a></p>
             </div>
           </div>
           <div className="email">
