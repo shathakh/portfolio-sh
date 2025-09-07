@@ -11,8 +11,10 @@ function Contact() {
 
     emailjs.sendForm('service_u7mpsks', 'template_6awg92g', e.target, 'azqUW2plBdqqF4ru6')
       .then((response) => {
+        // eslint-disable-next-line no-console
         console.log('SUCCESS!', response.status, response.text);
       }, (err) => {
+        // eslint-disable-next-line no-console
         console.log('FAILED...', err);
       });
 
