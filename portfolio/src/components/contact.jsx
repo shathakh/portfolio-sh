@@ -32,14 +32,14 @@ function Contact() {
             <FontAwesomeIcon className="address-icon" icon={faLocationDot} />
             <div className="info">
               <h3>Address</h3>
-              <p>Gaza, Palestine</p>
+              <p>Melbourne, Australia</p>
             </div>
           </div>
           <div className="phone">
             <FontAwesomeIcon className="phone-icon" icon={faPhone} />
             <div className="info">
               <h3>Phone</h3>
-              <p><a href="https://api.whatsapp.com/send?phone=970595832625" target="_blank" rel="noreferrer">+970</a></p>
+              <p><a href="https://api.whatsapp.com/send?phone=970595832625" target="_blank" rel="noreferrer">+61 </a></p>
             </div>
           </div>
           <div className="email">
@@ -51,8 +51,8 @@ function Contact() {
           </div>
           <div className="social-icons">
             <a href="https://www.linkedin.com/in/shatha-eqdaih/" target="_blank" rel="noreferrer"><FontAwesomeIcon className="linkedin" icon={faLinkedin} /></a>
-            <a href="https://twitter.com/shathakeq" target="_blank" rel="noreferrer"><FontAwesomeIcon className="twitter" icon={faTwitter} /></a>
             <a href="https://github.com/shathakh" target="_blank" rel="noreferrer"><FontAwesomeIcon className="github" icon={faGithub} /></a>
+            <a href="https://twitter.com/shathakeq" target="_blank" rel="noreferrer"><FontAwesomeIcon className="twitter" icon={faTwitter} /></a>
           </div>
         </div>
         <div className="contact-form">
